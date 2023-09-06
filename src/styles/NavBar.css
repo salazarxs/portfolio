@@ -1,0 +1,88 @@
+nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    height: 30vh;
+    right: 0;
+    top: 0;
+    margin-right: 3vw;
+    margin-top: 2vw;
+    z-index: 2;
+}
+
+nav button {
+    border: none;
+    outline: none;
+    border-radius: 50%;
+    height: 3vw;
+    width: 3vw;
+    font-size: 1.5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2vw;
+    background-color: var(--principal-color);
+}
+
+nav ul {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 70%;
+    color: white;
+}
+
+
+nav ul li {
+    font-family: var(--font);
+}
+
+.btn-close-menu {
+    display: none;
+}
+
+
+@keyframes openNav {
+    0% {
+        transform: rotate(0);
+    }
+
+    100% {
+        transform: rotate(-180deg);
+
+    }
+}
+
+@keyframes showCloseBtn {
+    0% {
+        transform: rotate(-180deg);
+
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes showOpenNav {
+    0% {
+        transform: rotate(-180deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes hideCloseBtn {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-180deg);
+    }
+}
