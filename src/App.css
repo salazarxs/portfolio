@@ -352,4 +352,87 @@ a {
 
 .form-get-in-touch .btn-form:hover {
     cursor: pointer;
+    color: white;
+    background-color: black;
+    border: 2px solid white;
+}
+
+@media screen and (max-width:900px) {
+    .container-presentation {
+        width: 80%;
+    }
+
+    .container-presentation .container-profile-img,
+    .container-presentation .container-info-principal {
+        width: 50%;
+    }
+
+    .container-presentation .container-info-principal .container-hello {
+        height: 50%;
+        display: flex;
+        justify-content: space-evenly !important;
+    }
+
+    .container-info-principal .container-hello p {
+        font-size: 2.7vw;
+        margin-bottom: 1.5vw;
+    }
+
+    .container-info-principal .container-hello h3,
+    .container-info-principal .container-hello h1:nth-child(3) {
+        font-size: 5vw !important;
+    }
+
+    .container-info-principal .contact-info-principal {
+        align-items: center;
+        justify-content: space-between;
+        padding: 0;
+        margin: 0;
+    }
+
+    .container-info-principal .contact-info-principal a,
+    .container-info-principal .contact-info-principal p {
+        width: 50%;
+        text-align: center;
+        padding: 0;
+        margin: 0;
+        justify-content: flex-start !important;
+        font-size: 1.8vw;
+    }
+
+    .container-description-text {
+        font-size: 3.5vw;
+        line-height: 5vw;
+    }
+
+    .title p {
+        font-size: 4vw;
+    }
+
+    .container-what-i-do {
+        margin-bottom: 4vw;
+
+    }
+
+    .container-what-i-do ul li svg {
+        font-size: 7vw;
+        margin-right: 3vw;
+    }
+
+    .container-what-i-do ul li {
+        font-size: 4vw;
+        font-weight: 200;
+    }
+
+    .container-get-in-touch form input,
+    .container-get-in-touch form input::placeholder,
+    .container-get-in-touch form textarea,
+    .container-get-in-touch form textarea::placeholder {
+        font-size: 3vw;
+    }
+
+    .container-get-in-touch form input.btn-form {
+        width: 20vw;
+        height: 8vw;
+    }
 }

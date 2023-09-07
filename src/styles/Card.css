@@ -49,6 +49,29 @@
     animation: showTitleDawn 500ms forwards;
 }
 
+@media screen and (max-width:900px) {
+    .card {
+        width: 100%;
+        margin-bottom: 9vw;
+        animation: none;
+    }
+
+    .card p,
+    .card h3 {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    .card p {
+        font-size: 5vw;
+    }
+
+    .card h3 {
+        font-size: 8vw;
+    }
+
+}
+
 @keyframes showTitleUp {
     0% {
         transform: translateY(-100%);
