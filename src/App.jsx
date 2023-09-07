@@ -32,7 +32,7 @@ function App() {
             <div className="container-hello">
               <p>Hi everyone 👋</p>
               <h3>I´m Martin Salazar</h3>
-              <p>I´m <strong style={{ color: 'var(--principal-color)' }}>web developer.</strong></p>
+              <h1>I´m <strong style={{ color: 'var(--principal-color)' }}>web developer.</strong></h1>
             </div>
             <div className="contact-info-principal">
 
@@ -60,7 +60,7 @@ function App() {
             <li><strong style={{ color: 'var(--principal-color)', paddingRight: '1vw' }}><FaReact /></strong>Internet applications</li>
           </ul>
         </div>
-        <div className="container-seccion-portfolio">
+        <div className="container-seccion-portfolio" id='portfolio'>
           <div className="title">
             <p>Portfolio</p>
           </div>

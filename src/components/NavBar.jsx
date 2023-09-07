@@ -50,7 +50,7 @@ const NavBar = () => {
             <ul className='nav-list' id='nav-list'>
                 <li>Home</li>
                 <li>Resume</li>
-                <li>Portafolio</li>
+                <li><a href="/#portfolio"></a> Portafolio</li>
                 <li>Blog</li>
                 <li>Contact</li>
             </ul>

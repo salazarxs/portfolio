@@ -204,7 +204,7 @@ a {
 }
 
 .container-info-principal .container-hello h3,
-.container-info-principal .container-hello p:nth-child(3) {
+.container-info-principal .container-hello h1:nth-child(3) {
     font-size: 2.5vw;
     font-weight: bold;
     margin-bottom: 1vw;
