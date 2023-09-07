@@ -1,15 +1,14 @@
 import React from 'react';
 
-
 // styles
 import '../styles/NavBar.css';
-
 
 // icons
 import { CgMenuRight } from 'react-icons/cg';
 import { AiOutlineClose } from 'react-icons/ai';
 
 const NavBar = () => {
+
     const handleOpenMenuBar = () => {
         const btnOpen = document.getElementById('btn-open-menu');
         const btnClose = document.getElementById('btn-close-menu');
@@ -41,6 +40,7 @@ const NavBar = () => {
             btnOpen.style.animation = 'showOpenNav 200ms forwards';
         }, ['200']);
     }
+
     return (
         <nav>
             <button className='btn-open-menu' id='btn-open-menu' onClick={() => handleOpenMenuBar()}><CgMenuRight /></button>
@@ -48,13 +48,11 @@ const NavBar = () => {
                 onClick={() => { handleCloseMenu() }}
             ><AiOutlineClose /></button>
             <ul className='nav-list' id='nav-list'>
-                <li>Home</li>
-                <li>Resume</li>
-                <li><a href="/#portfolio"></a> Portafolio</li>
-                <li>Blog</li>
-                <li>Contact</li>
+                <li><a href='#targetHome'>Home</a></li>
+                <li><a href='#targetWhat'>What I Do</a></li>
+                <li><a href='#portfolio'>Portfolio</a></li>
+                <li><a href='#targetContact'>Contact</a></li>
             </ul>
-
         </nav>
     );
 }
