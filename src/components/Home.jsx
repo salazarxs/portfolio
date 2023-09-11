@@ -17,7 +17,42 @@ import imgCalculator from '../images/calculator.avif';
 import imgSexta from '../images/BannerSextaCompania2.webp';
 
 const Home = () => {
+
+    const [receiver, setReciver] = useState();
+    const [affair, setAffair] = useState();
+    const [message, setMessage] = useState();
+    const [Name, setName] = useState();
+
+
+    const handleSubmitMail = async (e) => {
+        e.preventDefault();
+        const data = {
+            receiver,
+            affair,
+            message: `Nombre: ${Name}\n mensaje: ${message}`
+
+        }
+        try {
+            fetch(import.meta.env.VITE_URI_SERVER, {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            })
+                .then((response) => {
+                    if (response.ok) {
+                        return response.json();
+                    } else {
+                        reject('Error to send a mail')
+                    }
+                })
+        } catch (err) {
+            console.log(err);
+        }
+    }
     return (
+
 
         <div className='container-portfolio'>
 
@@ -89,10 +124,19 @@ const Home = () => {
                 <div className="title">
                     <p>Get in touch</p>
                 </div>
-                <form onSubmit={''} className='form-get-in-touch'>
-                    <input type="text" placeholder='Name' />
-                    <input type="mail" placeholder='Email' />
-                    <textarea name="message" id="message" cols="30" rows="10" placeholder='Tell me about your project'></textarea>
+                <form onSubmit={(e) => handleSubmitMail(e)} className='form-get-in-touch'>
+                    <input type="text" placeholder='Name' onChange={(e) => {
+                        setName(e.target.value)
+                    }} />
+                    <input type="mail" placeholder='Email' onChange={(e) => {
+                        setReciver(e.target.value)
+                    }} />
+                    <input type="text" placeholder='Subject' onChange={(e) => {
+                        setAffair(e.target.value)
+                    }} />
+                    <textarea name="message" id="message" cols="30" rows="10" placeholder='Tell me about your project' onChange={(e) => {
+                        setMessage(e.target.value)
+                    }} ></textarea>
                     <input type="submit" value={'Send'} className='btn-form' />
                 </form>
             </div>
