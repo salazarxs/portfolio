@@ -7,7 +7,7 @@ import '../styles/Card.css';
 const Card = ({ image, category, title, route }) => {
 
     return (
-        <a className='container-card' href={route} target='_blank'>
+        <a className='container-card' href={route} target='_blank' aria-label='Link to project'>
             <p>{category}</p>
             <div className='card' style={{ backgroundImage: `url(${image})` }} loading="lazy">
             </div>
