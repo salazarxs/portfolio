@@ -134,6 +134,10 @@ body {
     background-color: black;
 }
 
+#root {
+    overflow-x: hidden;
+}
+
 :root {
     --principal-color: #e6ff00;
     --font: 'Poppins', sans-serif;

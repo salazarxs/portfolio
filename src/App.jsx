@@ -7,10 +7,10 @@ import Home from './components/Home.jsx';
 function App() {
   return (
     <Router>
-      <div>
+      <>
         <NavBar />
         <Home />
-      </div>
+      </>
     </Router>
   );
 }
