@@ -14,7 +14,7 @@ import Card from './Card.jsx';
 // images
 import profileIamge from '../images/profile-image.jpg';
 import imgCalculator from '../images/calculator.avif';
-import imgSexta from '../images/BannerSextaCompania2.png';
+import imgSexta from '../images/BannerSextaCompania2.webp';
 
 const Home = () => {
     return (
