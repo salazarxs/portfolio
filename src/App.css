@@ -439,4 +439,8 @@ a {
         width: 20vw;
         height: 8vw;
     }
+
+    .show-cards {
+        margin-top: 6vw;
+    }
 }

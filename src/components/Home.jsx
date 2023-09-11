@@ -61,7 +61,7 @@ const Home = () => {
                 <div className="title">
                     <p>Portfolio</p>
                 </div>
-                <div className="show-cards">
+                <div className="show-cards" >
                     <Card
                         image={imgCalculator}
                         category={'Aplication'}
