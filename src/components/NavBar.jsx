@@ -43,7 +43,7 @@ const NavBar = () => {
 
     return (
         <nav>
-            <button className='btn-open-menu' id='btn-open-menu' onClick={() => handleOpenMenuBar()}><CgMenuRight /></button>
+            <button className='btn-open-menu' id='btn-open-menu' title='Navbar button' onClick={() => handleOpenMenuBar()}><CgMenuRight /></button>
             <button className='btn-close-menu' id='btn-close-menu'
                 onClick={() => { handleCloseMenu() }}
             ><AiOutlineClose /></button>

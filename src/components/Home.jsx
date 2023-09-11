@@ -14,6 +14,7 @@ import Card from './Card.jsx';
 // images
 import profileIamge from '../images/profile-image.jpg';
 import imgCalculator from '../images/calculator.avif';
+import imgSexta from '../images/BannerSextaCompania2.png';
 
 const Home = () => {
     return (
@@ -67,9 +68,10 @@ const Home = () => {
                         title={'Calculator'}
                     />
                     <Card
-                        image={imgCalculator}
-                        category={'Aplication'}
-                        title={'Calculator'}
+                        image={imgSexta}
+                        category={'WordPress website'}
+                        title={'Page for firefighters'}
+                        route={'https://sextacompañia.cl'}
                     />
                     <Card
                         image={imgCalculator}
