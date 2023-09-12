@@ -45,7 +45,7 @@ const Home = () => {
                     if (response.ok) {
                         return response.json();
                     } else {
-                        reject('Error to send a mail')
+                        console.log(response);
                     }
                 })
         } catch (err) {
