@@ -32,7 +32,7 @@ const Home = () => {
             message: `Nombre: ${Name}\n mensaje: ${message}`
 
         }
-        //
+        
         try {
             fetch(import.meta.env.VITE_URI_SERVER, {
                 method: 'POST',
