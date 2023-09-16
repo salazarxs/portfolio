@@ -38,7 +38,6 @@ const Home = () => {
             await axios.post(import.meta.env.VITE_URI_SERVER, data, {
                 headers: {
                     'Content-Type': 'application/json',
-                    'Access-Control-Allow-Origin': '*'
                 },
             })
                 .then((response) => {
