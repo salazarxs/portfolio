@@ -1,5 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
+import axios from 'axios';
 // iconst
 import { FaCalendarDays, FaReact } from 'react-icons/fa6';
 import { BsTelephoneFill, BsWordpress } from 'react-icons/bs';
@@ -32,14 +33,13 @@ const Home = () => {
             message: `Nombre: ${Name}\n mensaje: ${message}`
 
         }
-        
+
         try {
-            fetch(import.meta.env.VITE_URI_SERVER, {
-                method: 'POST',
+            await axios.post(import.meta.env.VITE_URI_SERVER, data, {
                 headers: {
-                    'Content-Type': 'application/json'
+                    'Content-Type': 'application/json',
+                    'Access-Control-Allow-Origin': '*'
                 },
-                body: JSON.stringify(data)
             })
                 .then((response) => {
                     if (response.ok) {
@@ -47,6 +47,9 @@ const Home = () => {
                     } else {
                         console.log(response);
                     }
+                })
+                .catch(err => {
+                    console.log(`Error catch axios -> ${err}`);
                 })
         } catch (err) {
             console.log(err);
