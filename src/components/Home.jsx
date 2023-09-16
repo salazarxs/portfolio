@@ -24,7 +24,7 @@ const Home = () => {
     const [message, setMessage] = useState();
     const [Name, setName] = useState();
 
-
+    //
     const handleSubmitMail = async (e) => {
         e.preventDefault();
         const data = {
