@@ -444,3 +444,7 @@ a {
         margin-top: 6vw;
     }
 }
+
+a:hover {
+    cursor: pointer;
+}

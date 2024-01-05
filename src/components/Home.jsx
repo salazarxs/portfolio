@@ -16,6 +16,7 @@ import Card from './Card.jsx';
 import profileIamge from '../images/profile-image.jpg';
 import imgCalculator from '../images/calculator.avif';
 import imgSexta from '../images/BannerSextaCompania2.webp';
+import weatherapp from '../images/weatherAppSS.png';
 
 const Home = () => {
 
@@ -73,7 +74,7 @@ const Home = () => {
 
                         <a href='tel:+56961094078' target='_blank'><strong style={{ color: 'var(--principal-color)', marginRight: '.8vw' }}><BsTelephoneFill /></strong> +56 9 6109 4078</a>
 
-                        <a href="mailto:martin.salazardev@gmail.com" target='_blank'><strong style={{ color: 'var(--principal-color)', marginRight: '.8vw' }}><TbBrandMailgun /></strong> martin.salazar@dev.com</a>
+                        <a href="mailto:msalazar@codeone.cl" target='_blank'><strong style={{ color: 'var(--principal-color)', marginRight: '.8vw' }}><TbBrandMailgun /></strong> msalazar@codeone.cl</a>
                         <a style={{ justifyContent: 'flex-end' }} href="https://goo.gl/maps/CUbzAV73B1EuMqvu7" target='_blank'><strong style={{ color: 'var(--principal-color)', marginRight: '.8vw' }}><BiSolidMap /></strong>Santiago, Chile</a>
                         <p  > <strong style={{ color: 'var(--principal-color)', marginRight: '.8vw', }}><FaCalendarDays /></strong> 10/01/2003</p>
 
@@ -101,9 +102,10 @@ const Home = () => {
                 </div>
                 <div className="show-cards" >
                     <Card
-                        image={imgCalculator}
+                        image={weatherapp}
                         category={'Aplication'}
-                        title={'Calculator'}
+                        title={'Weather App'}
+                        route={'https://weather-94cr24984-salazarxs.vercel.app/'}
                     />
                     <Card
                         image={imgSexta}
