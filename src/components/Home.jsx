@@ -105,7 +105,7 @@ const Home = () => {
                         image={weatherapp}
                         category={'Aplication'}
                         title={'Weather App'}
-                        route={'https://weather-94cr24984-salazarxs.vercel.app/'}
+                        route={'https://weatherappwhitreact.netlify.app/'}
                     />
                     <Card
                         image={imgSexta}
