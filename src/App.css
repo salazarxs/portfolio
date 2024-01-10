@@ -175,6 +175,7 @@ a {
     overflow: hidden;
     border-radius: 5% 40% 5% 40%;
     position: relative;
+    margin-right: 3vw;
 }
 
 .container-profile-img img {
@@ -182,7 +183,8 @@ a {
     height: auto;
     border-radius: 5% 40% 5% 40%;
     object-fit: cover;
-    padding-right: 3vw;
+    /*padding-right: 3vw;*/
+
     object-position: top;
 }
 
@@ -362,6 +364,10 @@ a {
 }
 
 @media screen and (max-width:900px) {
+    .container-portfolio {
+        padding: 4vw 0;
+    }
+
     .container-presentation {
         width: 80%;
     }
