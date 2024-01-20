@@ -17,6 +17,7 @@ import profileIamge from '../images/profile-image.jpg';
 import imgCalculator from '../images/calculator.avif';
 import imgSexta from '../images/BannerSextaCompania2.webp';
 import weatherapp from '../images/weatherAppSS.png';
+import { CircularProgress } from '@mui/material';
 
 const Home = () => {
 
@@ -24,10 +25,12 @@ const Home = () => {
     const [affair, setAffair] = useState();
     const [message, setMessage] = useState();
     const [Name, setName] = useState();
+    const [loading, setLoading] = useState(false);
 
     //
     const handleSubmitMail = async (e) => {
         e.preventDefault();
+        setLoading(true);
         const data = {
             receiver,
             affair,
@@ -43,16 +46,26 @@ const Home = () => {
             })
                 .then((response) => {
                     if (response.ok) {
+                        setLoading(false)
                         return response.json();
                     } else {
+                        setLoading(false)
                         console.log(response);
+
+                        alert('Error to send message, please try again later');
+                        setLoading(false)
                     }
                 })
                 .catch(err => {
                     console.log(`Error catch axios -> ${err}`);
+                    alert('Error to send message, please try again later');
+                    setLoading(false)
                 })
         } catch (err) {
             console.log(err);
+
+            alert('Error to send message, please try again later');
+            setLoading(false)
         }
     }
     return (
@@ -142,7 +155,7 @@ const Home = () => {
                     <textarea name="message" id="message" cols="30" rows="10" placeholder='Tell me about your project' onChange={(e) => {
                         setMessage(e.target.value)
                     }} ></textarea>
-                    <input type="submit" value={'Send'} className='btn-form' />
+                    <button type="submit" className='btn-form'>{loading ? <CircularProgress id="loading-form" /> : 'Send'}</button>
                 </form>
             </div>
         </div>
