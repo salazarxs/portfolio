@@ -356,6 +356,9 @@ a {
     background-color: white;
     border-radius: 5vw;
     height: 8vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .form-get-in-touch .btn-form:hover {
@@ -381,12 +384,10 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-#loading-form {
     fill: white;
     color: white;
 }
+
 
 @media screen and (max-width:900px) {
     .container-portfolio {

@@ -47,6 +47,7 @@ const Home = () => {
                 .then((response) => {
                     if (response.ok) {
                         setLoading(false)
+                        alert('Send message successful 📑');
                         return response.json();
                     } else {
                         setLoading(false)
