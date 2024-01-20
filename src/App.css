@@ -467,7 +467,7 @@ a {
         font-size: 3vw;
     }
 
-    .container-get-in-touch form input.btn-form {
+    .container-get-in-touch form button.btn-form {
         width: 20vw;
         height: 8vw;
     }
