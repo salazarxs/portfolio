@@ -51,13 +51,12 @@ const Home = () => {
                     } else {
                         setLoading(false)
                         console.log(response);
-
-                        alert('Error to send message, please try again later');
                         setLoading(false)
                     }
                 })
                 .catch(err => {
                     console.log(`Error catch axios -> ${err}`);
+
                     alert('Error to send message, please try again later');
                     setLoading(false)
                 })

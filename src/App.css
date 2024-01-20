@@ -377,7 +377,11 @@ a {
     justify-content: center;
 }
 
-#loading-form {}
+#loading-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 #loading-form {
     fill: white;
