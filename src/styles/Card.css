@@ -47,6 +47,7 @@
 .container-card p {
     font-size: 1.5vw;
     padding-bottom: 3vw;
+    font-weight: bold;
 }
 
 .container-card h3 {
