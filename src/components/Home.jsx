@@ -127,8 +127,20 @@ const Home = () => {
                     <p>What i do</p>
                 </div>
                 <ul>
-                    <li><strong style={{ color: 'var(--principal-color)', paddingRight: '1vw' }}><TbDevicesCode /></strong>Web sites</li>
-                    <li><strong style={{ color: 'var(--principal-color)', paddingRight: '1vw' }}><BsWordpress /></strong>WordPress sites</li>
+                    <li>
+                        <a href="https://es.react.dev/">
+                            <strong style={{ color: 'var(--principal-color)', paddingRight: '1vw' }}>
+                                <TbDevicesCode />
+                            </strong>Web sites
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wordpress.com/">
+                            <strong style={{ color: 'var(--principal-color)', paddingRight: '1vw' }}>
+                                <BsWordpress />
+                            </strong>WordPress sites
+                        </a>
+                    </li>
                     <li><strong style={{ color: 'var(--principal-color)', paddingRight: '1vw' }}><FaReact /></strong>Internet applications</li>
                 </ul>
             </div>
