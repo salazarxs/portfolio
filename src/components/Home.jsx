@@ -17,7 +17,7 @@ import profileIamge from '../images/profile-image.jpg';
 import imgCalculator from '../images/calculator.avif';
 import imgSexta from '../images/BannerSextaCompania2.webp';
 import weatherapp from '../images/weatherAppSS.png';
-import codeOne from '../images/codeOne.webp';
+import { CircularProgress } from '@mui/material';
 
 const Home = () => {
 
@@ -25,29 +25,12 @@ const Home = () => {
     const [affair, setAffair] = useState();
     const [message, setMessage] = useState();
     const [Name, setName] = useState();
-    const experienceList = [
-        {
-            title: 'Weather app',
-            image: weatherapp,
-            category: 'ReactJS',
-            route: 'https://weatherappwhitreact.netlify.app/'
-        },
-        {
-            title: 'Page for firefighters',
-            image: imgSexta,
-            category: 'Wordpress',
-            route: 'https://sextacompañia.cl'
-        },
-        {
-            title: 'My company website',
-            image: codeOne,
-            category: 'Wordpress',
-            route: 'https://codeone.cl'
-        }
-    ]
+    const [loading, setLoading] = useState(false);
+
     //
     const handleSubmitMail = async (e) => {
         e.preventDefault();
+        setLoading(true);
         const data = {
             receiver,
             affair,
@@ -63,16 +46,26 @@ const Home = () => {
             })
                 .then((response) => {
                     if (response.ok) {
+                        setLoading(false)
+                        alert('Send message successful 📑');
                         return response.json();
                     } else {
+                        setLoading(false)
                         console.log(response);
+                        setLoading(false)
                     }
                 })
                 .catch(err => {
                     console.log(`Error catch axios -> ${err}`);
+
+                    alert('Error to send message, please try again later');
+                    setLoading(false)
                 })
         } catch (err) {
             console.log(err);
+
+            alert('Error to send message, please try again later');
+            setLoading(false)
         }
     }
     return (
@@ -121,17 +114,28 @@ const Home = () => {
                     <p>Portfolio</p>
                 </div>
                 <div className="show-cards" >
-                    {
-                        experienceList.map((exp, i) => (
-                            <Card
-                                key={i}
-                                category={exp.category}
-                                image={exp.image}
-                                route={exp.route}
-                                title={exp.title}
-                            />
-                        ))
-                    }
+                    <Card
+                        image={weatherapp}
+                        category={'Aplication'}
+                        title={'Weather App'}
+                        route={'https://weatherappwhitreact.netlify.app/'}
+                    />
+                    <Card
+                        image={imgSexta}
+                        category={'WordPress website'}
+                        title={'Page for firefighters'}
+                        route={'https://sextacompañia.cl'}
+                    />
+                    <Card
+                        image={imgCalculator}
+                        category={'Aplication'}
+                        title={'Calculator'}
+                    />
+                    <Card
+                        image={imgCalculator}
+                        category={'Aplication'}
+                        title={'Calculator'}
+                    />
                 </div>
             </div>
             <div className="container-get-in-touch" id='targetContact'>
@@ -151,7 +155,7 @@ const Home = () => {
                     <textarea name="message" id="message" cols="30" rows="10" placeholder='Tell me about your project' onChange={(e) => {
                         setMessage(e.target.value)
                     }} ></textarea>
-                    <input type="submit" value={'Send'} className='btn-form' />
+                    <button type="submit" className='btn-form'>{loading ? <CircularProgress id="loading-form" /> : 'Send'}</button>
                 </form>
             </div>
         </div>
