@@ -17,6 +17,7 @@ import profileIamge from '../images/profile-image.jpg';
 import imgCalculator from '../images/calculator.avif';
 import imgSexta from '../images/BannerSextaCompania2.webp';
 import weatherapp from '../images/weatherAppSS.png';
+import codeOne from '../images/codeOne.webp';
 import { CircularProgress } from '@mui/material';
 
 const Home = () => {
@@ -28,6 +29,28 @@ const Home = () => {
     const [loading, setLoading] = useState(false);
 
     //
+    const experienceList = [
+        {
+            title: 'Weather app',
+            image: weatherapp,
+            category: 'ReactJS',
+            route: 'https://weatherappwhitreact.netlify.app/'
+        },
+        {
+            title: 'Page for firefighters',
+            image: imgSexta,
+            category: 'Wordpress',
+            route: 'https://sextacompañia.cl'
+        },
+        {
+            title: 'My company website',
+            image: codeOne,
+            category: 'Wordpress',
+            route: 'https://codeone.cl'
+        }
+    ]
+
+
     const handleSubmitMail = async (e) => {
         e.preventDefault();
         setLoading(true);
@@ -114,28 +137,18 @@ const Home = () => {
                     <p>Portfolio</p>
                 </div>
                 <div className="show-cards" >
-                    <Card
-                        image={weatherapp}
-                        category={'Aplication'}
-                        title={'Weather App'}
-                        route={'https://weatherappwhitreact.netlify.app/'}
-                    />
-                    <Card
-                        image={imgSexta}
-                        category={'WordPress website'}
-                        title={'Page for firefighters'}
-                        route={'https://sextacompañia.cl'}
-                    />
-                    <Card
-                        image={imgCalculator}
-                        category={'Aplication'}
-                        title={'Calculator'}
-                    />
-                    <Card
-                        image={imgCalculator}
-                        category={'Aplication'}
-                        title={'Calculator'}
-                    />
+
+                    {
+                        experienceList.map((exp, i) => (
+                            <Card
+                                key={i}
+                                category={exp.category}
+                                image={exp.image}
+                                route={exp.route}
+                                title={exp.title}
+                            />
+                        ))
+                    }
                 </div>
             </div>
             <div className="container-get-in-touch" id='targetContact'>
