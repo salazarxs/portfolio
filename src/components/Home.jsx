@@ -139,15 +139,17 @@ const Home = () => {
                 <div className="show-cards" >
 
                     {
-                        experienceList.map((exp, i) => (
-                            <Card
-                                key={i}
-                                category={exp.category}
-                                image={exp.image}
-                                route={exp.route}
-                                title={exp.title}
-                            />
-                        ))
+                        experienceList.length != 0 ?
+                            experienceList.map((exp, i) => (
+                                <Card
+                                    key={i}
+                                    category={exp.category}
+                                    image={exp.image}
+                                    route={exp.route}
+                                    title={exp.title}
+                                />
+                            ))
+                            : 'Loading data...'
                     }
                 </div>
             </div>
